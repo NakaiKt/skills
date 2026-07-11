@@ -2,8 +2,8 @@
 
 ## 1. 作る
 
-```bash
-scripts/new-skill.sh <skill-name>
+```powershell
+.\scripts\new-skill.ps1 <skill-name>
 ```
 
 `skills/<skill-name>/SKILL.md` が雛形から生成される。`<skill-name>` は
@@ -37,8 +37,8 @@ skills/<name>/
 
 ## 3. 検証
 
-```bash
-scripts/validate.sh
+```powershell
+.\scripts\validate.ps1
 ```
 
 `skills-ref`（公式 CLI）が入っていればそれを、無ければ組み込みの簡易チェックを使う。
@@ -55,8 +55,8 @@ skills-ref validate ./skills/<skill-name>
 | 面 | コマンド／操作 |
 |---|---|
 | Claude Code (plugin) | push → `/plugin marketplace update nakai-skills` |
-| Claude Code (personal/project) | `scripts/install-local.sh [<name>]` |
-| Claude アプリ / Web | `scripts/build-zips.sh [<name>]` → `dist/<name>.zip` をアップロード |
+| Claude Code (personal/project) | `.\scripts\install-local.ps1 [<name>]` |
+| Claude アプリ / Web | `.\scripts\build-zips.ps1 [<name>]` → `dist/<name>.zip` をアップロード |
 
 ## 更新のモデル
 
@@ -64,7 +64,7 @@ skills-ref validate ./skills/<skill-name>
   バージョンになる。push するたびに `/plugin marketplace update` で最新が届く。
   リリースを明示的に区切りたくなったら `plugin.json` に `version` を追加し、以後は
   変更のたびに手動で上げる運用へ切り替える。
-- **symlink 版**: `SKILL.md` の編集がセッションに即反映（本文のみ。`hooks/` 等の
+- **junction 版**: `SKILL.md` の編集がセッションに即反映（本文のみ。`hooks/` 等の
   構造変更は `/reload-plugins` が必要）。
 - **アプリ版**: zip を作り直して再アップロード（アプリ側に自動更新はない）。
 

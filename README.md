@@ -15,11 +15,13 @@ Claude 用の **Agent Skills** を一元管理し、Claude Code とアプリ/Web
 └── dist/             # 生成物（gitignore）
 ```
 
+スクリプトは Windows PowerShell 用（`.ps1`）。PowerShell から実行する。
+
 ## 新しいスキルを追加する
 
-1. `scripts/new-skill.sh my-skill` で雛形を作成
+1. `.\scripts\new-skill.ps1 my-skill` で雛形を作成
 2. `SKILL.md` を編集
-3. `scripts/validate.sh` で検証
+3. `.\scripts\validate.ps1` で検証
 4. 下記の配布先ごとにやることを実施
 
 ## 配布先ごとにやること
@@ -30,12 +32,12 @@ push → `/plugin marketplace update nakai-skills`（新規追加・更新とも
 
 ### 2. Claude Code（personal/project、plugin を使わない）
 
-- 新規追加時: `scripts/install-local.sh` を実行
-- 更新時: 何もしなくてよい（symlink 経由で自動反映）
+- 新規追加時: `.\scripts\install-local.ps1` を実行（junction を張る。admin 権限は不要）
+- 更新時: 何もしなくてよい（junction 経由で自動反映）
 
 ### 3. Claude アプリ / Web（zip アップロード）
 
-`scripts/build-zips.sh` で zip を生成し、**Settings → Capabilities → Skills → Upload skill** からアップロードする。
+`.\scripts\build-zips.ps1` で zip を生成し、**Settings → Capabilities → Skills → Upload skill** からアップロードする。
 
 - 新規追加: そのままアップロード
 - 更新: 古いスキルを削除してから同名で再アップロード
