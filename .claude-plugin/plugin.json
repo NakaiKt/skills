@@ -1,0 +1,8 @@
+{
+  "name": "nakai-skills",
+  "description": "Portable Agent Skills bundled for Claude Code. The same skills also work as personal/project skills and as uploadable skills in the Claude apps.",
+  "author": {
+    "name": "Katsuhiro Nakai",
+    "email": "k.nakai.work@gmail.com"
+  }
+}

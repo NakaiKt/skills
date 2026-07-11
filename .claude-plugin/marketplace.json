@@ -1,0 +1,14 @@
+{
+  "name": "nakai-skills",
+  "owner": {
+    "name": "Katsuhiro Nakai",
+    "email": "k.nakai.work@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "nakai-skills",
+      "source": ".",
+      "description": "Bundled portable Agent Skills. Skills are namespaced as /nakai-skills:<skill-name>."
+    }
+  ]
+}

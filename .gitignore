@@ -1,0 +1,6 @@
+# Built skill archives for Claude app upload
+/dist/
+
+# OS / editor noise
+.DS_Store
+*.swp
