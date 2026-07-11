@@ -22,22 +22,52 @@ Claude 用の **Agent Skills** を一元管理し、Claude Code とアプリ/Web
 1. `.\scripts\new-skill.ps1 my-skill` で雛形を作成
 2. `SKILL.md` を編集
 3. `.\scripts\validate.ps1` で検証
-4. 下記の配布先ごとにやることを実施
+4. 使う面ごとに下記のどれかで配布
 
-## 配布先ごとにやること
+## スキルの入れ方（使う面ごとに選ぶ）
 
-### 1. Claude Code（plugin）
+同じスキルでも、使う面によって入れ方が変わる。**面を1つ選び、その手順だけ行う**。
 
-push → `/plugin marketplace update nakai-skills`（新規追加・更新とも同じ）
+### ターミナルの Claude Code
 
-### 2. Claude Code（personal/project、plugin を使わない）
+次の A・B の**どちらか一方**でよい（両方やる必要はない）。
 
-- 新規追加時: `.\scripts\install-local.ps1` を実行（junction を張る。admin 権限は不要）
-- 更新時: 何もしなくてよい（junction 経由で自動反映）
+**A. plugin として入れる**（呼び出し名は `/nakai-skills:<skill>`）
 
-### 3. Claude アプリ / Web（zip アップロード）
+初回だけ:
 
-`.\scripts\build-zips.ps1` で zip を生成し、**Settings → Capabilities → Skills → Upload skill** からアップロードする。
+```
+/plugin marketplace add NakaiKt/skills
+/plugin install nakai-skills@nakai-skills
+```
 
-- 新規追加: そのままアップロード
-- 更新: 古いスキルを削除してから同名で再アップロード
+追加・更新は GitHub に push してから:
+
+```
+/plugin marketplace update nakai-skills
+```
+
+**B. 個人スキルとして入れる**（呼び出し名は `/<skill>`）
+
+```
+.\scripts\install-local.ps1              # 全スキルを ~/.claude/skills へ
+.\scripts\install-local.ps1 my-skill     # 個別
+.\scripts\install-local.ps1 -Project     # このリポジトリの .claude/skills へ
+```
+
+コピーではなくリポジトリ本体を指すリンクを張るので、以後 `SKILL.md` を編集すれば**再実行なしで反映される**（更新時にやることはない）。
+
+### アプリ / デスクトップ版の Claude Code
+
+`/plugin` コマンドは使えない。プロンプト欄の **＋ボタン → Plugins** から marketplace 経由で入れる。上の B（`install-local.ps1`）もローカルセッションで使える。
+
+### Claude チャット（claude.ai のチャット）
+
+zip を作ってアップロードする。Claude Code とはスキルが同期しない別の面。
+
+```
+.\scripts\build-zips.ps1                 # dist\*.zip を生成（全スキル）
+.\scripts\build-zips.ps1 my-skill        # 個別
+```
+
+生成した `dist\<name>.zip` を **Settings → Capabilities → Skills → Upload skill** から入れる。更新時は古いスキルを削除してから同名で再アップロードする。
