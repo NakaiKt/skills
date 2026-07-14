@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "nakai-skills",
-      "source": ".",
+      "source": "./",
       "description": "Bundled portable Agent Skills. Skills are namespaced as /nakai-skills:<skill-name>."
     }
   ]
