@@ -57,6 +57,10 @@ skills-ref validate ./skills/<skill-name>
 | Claude Code (plugin) | push → `/plugin marketplace update nakai-skills` |
 | Claude Code (personal/project) | `.\scripts\install-local.ps1 [<name>]` |
 | Claude アプリ / Web | `.\scripts\build-zips.ps1 [<name>]` → `dist/<name>.zip` をアップロード |
+| Cursor | `.\scripts\build-cursor.ps1 [-Project] [<name>]` → `.cursor/rules/<name>.mdc` |
+| Codex | `.\scripts\build-codex.ps1 [-Project] [<name>]` → `AGENTS.md` (+ `.codex/skills/`) |
+
+Cursor / Codex への移植の詳細と注意点は [porting-cursor-codex.md](porting-cursor-codex.md)。
 
 ## 更新のモデル
 
