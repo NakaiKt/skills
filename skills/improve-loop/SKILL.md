@@ -43,7 +43,16 @@ metadata:
 ### 軸B: 対象（個人 / チーム・組織）
 
 - **チーム・組織** → [references/team.md](references/team.md)（実験ループ／機能=仮説／チームのふりかえりの器）
-- **個人** → [references/personal.md](references/personal.md)（個人の週次/月次ふりかえり／内省の引き出し）
+- **個人** → [references/personal.md](references/personal.md)（型カタログ／認知の4点セット／反芻ガード／問いの銀行）
+
+### 軸C（個人のとき）: 軽い定例か / 深い内省か
+
+個人を選んだら、さらに目的で入口を分ける（詳細と型の選び方は personal.md §1）。
+
+- **軽い定例で回すリズムを保ちたい** → YWT / KPT で行動を棚卸し（personal.md §1・§5）。
+- **感情が動いた1経験を深掘りしたい** → Gibbs / Kolb で掘る（personal.md §1・§7）。
+- **どの型でも浅くて終わった感があるとき** → 認知の4点セット（意見・経験・感情・価値観）で
+  一段掘り、「なぜ」を「何が」に置き換えて反芻を避ける（personal.md §2・§3）。
 
 ---
 
@@ -81,12 +90,17 @@ metadata:
 
 - [references/team.md](references/team.md) — チーム・組織向け：実験ループの詳細、機能=仮説、
   チームのふりかえり（レトロ／スクラムイベント）の器。
-- [references/personal.md](references/personal.md) — 個人向け：週次/月次ふりかえり、内省の引き出し方。
+- [references/personal.md](references/personal.md) — 個人向け：型カタログ（YWT/KPT/Gibbs/Kolb）、
+  認知の4点セット（意見・経験・感情・価値観）、反芻／省察ガード、問いの銀行、リズム設計、
+  バイアス補正、経験の持論化。
 
 ## 収録知見
 
-- Evidence-Based Management Guide 2024（Scrum.org, CC BY-SA 4.0）
-- （将来）リフレクション／ふりかえりの知見 → `references/personal.md` を厚くする
-- （将来）アジャイル/スクラムイベントの知見 → `references/team.md` を厚くする
-- 分割トリガー：上記2つが両方入って references が二極化し、トリガー語が「自分のふりかえり/内省」vs
-  「チームのレトロ/スプリント」に明確に割れたら、個人向けを `self-reflect` スキルとして独立させる（docs/skill-map.md 参照）。
+- Evidence-Based Management Guide 2024（Scrum.org, CC BY-SA 4.0）— 実験ループ／アウトカム検査。
+- 熊平美香『リフレクション（REFLECTION）』— 認知の4点セット／メタ認知／アンラーン（`personal.md`）。
+- Kolb 経験学習 / Gibbs リフレクティブサイクル / Driscoll / YWT / KPT — ふりかえりの型（`personal.md`）。
+- Tasha Eurich（"Why" より "What"）/ affect labeling — 反芻を避ける内省の操作（`personal.md`）。
+- （将来）アジャイル/スクラムイベントの知見 → `references/team.md` を厚くする。
+- 分割トリガー：個人向け（`personal.md`）は内省の知見が厚くなってきた。チーム向けのスクラム/レトロ知見が
+  同程度に厚くなり、トリガー語が「自分のふりかえり/内省」vs「チームのレトロ/スプリント」に明確に割れたら、
+  個人向けを `self-reflect` スキルとして独立させる（docs/skill-map.md 参照）。
