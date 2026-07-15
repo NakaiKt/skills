@@ -43,7 +43,9 @@ metadata:
 ### 軸B: 対象（個人 / チーム・組織）
 
 - **チーム・組織** → [references/team.md](references/team.md)（実験ループ／機能=仮説／チームのふりかえりの器）
-- **個人** → [references/personal.md](references/personal.md)（型カタログ／認知の4点セット／反芻ガード／問いの銀行）
+- **個人** → [references/personal.md](references/personal.md)（型カタログ／反芻ガード／問いの銀行／リズム設計）
+- **深掘りの前提知識（個人・チーム共通）** → [references/reflection.md](references/reflection.md)
+  （メタ認知／認知の4点セット／推論のはしご／ダブルループ学習／Schön の行為内省察／評価判断の保留）
 
 ### 軸C（個人のとき）: 軽い定例か / 深い内省か
 
@@ -51,8 +53,9 @@ metadata:
 
 - **軽い定例で回すリズムを保ちたい** → YWT / KPT で行動を棚卸し（personal.md §1・§5）。
 - **感情が動いた1経験を深掘りしたい** → Gibbs / Kolb で掘る（personal.md §1・§7）。
-- **どの型でも浅くて終わった感があるとき** → 認知の4点セット（意見・経験・感情・価値観）で
-  一段掘り、「なぜ」を「何が」に置き換えて反芻を避ける（personal.md §2・§3）。
+- **どの型でも浅くて終わった感があるとき** → リフレクションの深掘り道具を当てる：認知の4点セット
+  （意見・経験・感情・価値観）→ 推論のはしごで事実まで降りる → 前提が怪しければダブルループ／
+  アンラーン。「なぜ」を「何が」に置き換えて反芻を避ける（reflection.md ＋ personal.md §2・§3）。
 
 ---
 
@@ -90,14 +93,18 @@ metadata:
 
 - [references/team.md](references/team.md) — チーム・組織向け：実験ループの詳細、機能=仮説、
   チームのふりかえり（レトロ／スクラムイベント）の器。
-- [references/personal.md](references/personal.md) — 個人向け：型カタログ（YWT/KPT/Gibbs/Kolb）、
-  認知の4点セット（意見・経験・感情・価値観）、反芻／省察ガード、問いの銀行、リズム設計、
-  バイアス補正、経験の持論化。
+- [references/personal.md](references/personal.md) — 個人向けの実践：型カタログ（YWT/KPT/Gibbs/Kolb）、
+  反芻／省察ガード、問いの銀行、リズム設計、バイアス補正、経験の持論化。
+- [references/reflection.md](references/reflection.md) — 深掘りの前提知識（個人・チーム共通）：
+  メタ認知、認知の4点セット、推論のはしご、シングル／ダブルループ学習、Schön の行為内省察、
+  5つの入口、評価判断の保留。
 
 ## 収録知見
 
 - Evidence-Based Management Guide 2024（Scrum.org, CC BY-SA 4.0）— 実験ループ／アウトカム検査。
-- 熊平美香『リフレクション（REFLECTION）』— 認知の4点セット／メタ認知／アンラーン（`personal.md`）。
+- 熊平美香『リフレクション（REFLECTION）』— メタ認知／認知の4点セット／5つの入口／評価判断の保留（`reflection.md`）。
+- Donald Schön『反省的実践家』— 行為の中の省察／行為の後の省察（`reflection.md`）。
+- Chris Argyris — 推論のはしご／シングル・ダブルループ学習（`reflection.md`）。
 - Kolb 経験学習 / Gibbs リフレクティブサイクル / Driscoll / YWT / KPT — ふりかえりの型（`personal.md`）。
 - Tasha Eurich（"Why" より "What"）/ affect labeling — 反芻を避ける内省の操作（`personal.md`）。
 - （将来）アジャイル/スクラムイベントの知見 → `references/team.md` を厚くする。
