@@ -3,7 +3,11 @@
 ## 1. 作る
 
 ```powershell
-.\scripts\new-skill.ps1 <skill-name>
+.\scripts\new-skill.ps1 <skill-name>     # Windows
+```
+
+```bash
+./scripts/new-skill.sh <skill-name>      # Mac / Linux
 ```
 
 `skills/<skill-name>/SKILL.md` が雛形から生成される。`<skill-name>` は
@@ -38,7 +42,11 @@ skills/<name>/
 ## 3. 検証
 
 ```powershell
-.\scripts\validate.ps1
+.\scripts\validate.ps1     # Windows
+```
+
+```bash
+./scripts/validate.sh      # Mac / Linux
 ```
 
 `skills-ref`（公式 CLI）が入っていればそれを、無ければ組み込みの簡易チェックを使う。
@@ -60,6 +68,9 @@ skills-ref validate ./skills/<skill-name>
 | Cursor | `.\scripts\build-cursor.ps1 [-Project] [<name>]` → `.cursor/rules/<name>.mdc` |
 | Codex | `.\scripts\build-codex.ps1 [-Project] [<name>]` → `AGENTS.md` (+ `.codex/skills/`) |
 
+表は Windows(`.ps1`) の例。Mac/Linux は同名の `.sh` を使い、オプションは `-Project`→`--project` /
+`-Copy`→`--copy` に読み替える（例: `./scripts/install-local.sh --project <name>`）。
+
 Cursor / Codex への移植の詳細と注意点は [porting-cursor-codex.md](porting-cursor-codex.md)。
 
 ## 更新のモデル
@@ -68,7 +79,7 @@ Cursor / Codex への移植の詳細と注意点は [porting-cursor-codex.md](po
   バージョンになる。push するたびに `/plugin marketplace update` で最新が届く。
   リリースを明示的に区切りたくなったら `plugin.json` に `version` を追加し、以後は
   変更のたびに手動で上げる運用へ切り替える。
-- **junction 版**: `SKILL.md` の編集がセッションに即反映（本文のみ。`hooks/` 等の
+- **junction / symlink 版**（Windows は junction、Mac/Linux は symlink）: `SKILL.md` の編集がセッションに即反映（本文のみ。`hooks/` 等の
   構造変更は `/reload-plugins` が必要）。
 - **アプリ版**: zip を作り直して再アップロード（アプリ側に自動更新はない）。
 
